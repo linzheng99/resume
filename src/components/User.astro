@@ -1,23 +1,27 @@
 ---
 import SocialLink from './ui/SocialLink.astro'
-// interface Props {
-//   title: string
-//   body: string
-//   href: string
-// }
+interface Props {
+  author: string
+  links?: {
+    icon: string
+    value: string
+    url?: string
+  }[]
+}
 
-// const { href, title, body } = Astro.props
+const { author, links } = Astro.props
 ---
 
 <div class="border-solid border-zinc-100 lg:border-r lg:my-20 py-20 sm:px-40 text-center">
   <div class="sticky top-40">
     <div class="flex flex-col items-center gap-4">
       <img src="/src/assets/images/avatar.jpg" width="200" height="200" class="rounded-full bg-cover aspect-square object-cover my-8" />
-      <div class="font-bold text-2xl">Lin Zheng</div>
-      <SocialLink icon="location" value="WenZhou" />
+      <div class="font-bold text-2xl">{author}</div>
+      {links?.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
+      <!-- <SocialLink icon="location" value="WenZhou" />
       <SocialLink icon="weixin" value="linzheng-99" />
       <SocialLink icon="email" value="linzheng9045@gmail.com" />
-      <SocialLink icon="github" value="linzheng99" url='https://github.com/linzheng99' />
+      <SocialLink icon="github" value="linzheng99" url="https://github.com/linzheng99" /> -->
     </div>
   </div>
 </div>

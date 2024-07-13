@@ -1,10 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import User from '../components/User.astro'
+
+const links = [
+	{
+		icon: 'location',
+		value: 'WenZhou'
+	},
+	{
+		icon: 'weixin',
+		value: 'linzheng-99'
+	},
+	{
+		icon: 'email',
+		value: 'linzheng9045@gmail.com'
+	},
+	{
+		icon: 'github',
+		value: 'linzheng99',
+		url: 'https://github.com/linzheng99'
+	}
+]
+
 ---
 
 <Layout title="Welcome to my resume.">
-	<User />
+	<User author='Lin Zheng' links={links} />
 </Layout>
 
 <style></style>
