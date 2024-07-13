@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "resume",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.5",
     "@astrojs/check": "^0.5.8",
+    "@astrojs/solid-js": "^4.4.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.11.5",
+    "astro-icon": "^1.1.0",
+    "solid-js": "^1.8.18",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.2.2"
   }
 }

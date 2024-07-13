@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  url?: string
+  icon?: string
+  value?: string
+}
+const { value, icon, url } = Astro.props
+---
+
+<div class="flex gap-2 items-center">
+  <Icon name={icon} />
+  {
+    url ? (
+      <a target="_blank" href={url}>
+        {value}
+      </a>
+    ) : (
+      <span>{value}</span>
+    )
+  }
+</div>
