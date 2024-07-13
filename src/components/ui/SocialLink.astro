@@ -13,7 +13,7 @@ const { value, icon, url } = Astro.props
   <Icon name={icon} />
   {
     url ? (
-      <a target="_blank" href={url}>
+      <a target="_blank" href={url} class="underline hover:text-lime-400">
         {value}
       </a>
     ) : (
