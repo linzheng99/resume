@@ -1,0 +1,36 @@
+---
+import ModuleHeader from './ui/ModuleHeader.astro'
+
+interface Education {
+  time: String
+  school: String
+  profession: String
+  lv: String
+}
+const educations: Education[] = [
+  {
+    time: '2017年 ~ 2020年',
+    school: 'xxxx',
+    profession: 'xxx',
+    lv: 'xxx'
+  },
+]
+---
+
+<div>
+  <ModuleHeader title="教育经历" />
+  <ul>
+    {
+      educations.map(item => (
+        <li class="mb-4">
+          <div class="flex lg:justify-start justify-center gap-2">
+            <span>{item.time}</span>
+            <span>{item.school}</span>
+            <span>{item.profession}</span>
+            <span>{item.lv}</span>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>
