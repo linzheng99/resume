@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import User from '../components/User.astro'
+import Introduce from '../components/Introduce.astro'
+import Company from '../components/Company.astro'
+import Skills from '../components/Skills.astro'
+import OpenSource from '../components/OpenSource.astro'
+import Education from '../components/Education.astro'
 
 const links = [
 	{
@@ -21,11 +26,15 @@ const links = [
 		url: 'https://github.com/linzheng99'
 	}
 ]
-
 ---
 
 <Layout title="Welcome to my resume.">
-	<User author='Lin Zheng' links={links} />
+	<User author="Lin Zheng" links={links} />
+	<div class="lg:my-20 mx-6 lg:mx-8 flex flex-col overflow-x-hidden gap-4">
+		<Introduce />
+		<Company />
+		<OpenSource />
+		<Skills />
+		<Education />
+	</div>
 </Layout>
-
-<style></style>
