@@ -1,0 +1,64 @@
+---
+import ModuleHeader from "./ui/ModuleHeader.astro"
+
+interface Config {
+  name: String
+  time: String
+  projects: {
+    name: String
+    details: String
+  }[]
+}
+const config: Config[] = [
+  {
+    name: 'ABC公司',
+    time: '2021年8月 - 至今',
+    projects: [
+      {
+        name: 'ABC项目',
+        details: '基于 star 面试法来写 - 背景 - 任务 - 行动 - 结果'
+      },
+      {
+        name: 'ABC其他',
+        details: '写2 - 3 个核心项目就足够了, 能体现出你的价值的'
+      }
+    ]
+  },
+  {
+    name: 'DEF公司',
+    time: '2021年8月 - 至今',
+    projects: [
+      {
+        name: 'DEF项目',
+        details: '基于 star 面试法来写 - 背景 - 任务 - 行动 - 结果'
+      },
+      {
+        name: 'DEF其他',
+        details: '写2 - 3 个核心项目就足够了, 能体现出你的价值的'
+      }
+    ]
+  }
+]
+---
+
+<div>
+  <ModuleHeader title="工作经历" />
+  <ul>
+    {
+      config.map(item => (
+        <li class="mb-4 text-center lg:text-left">
+          <h2 class="text-3xl font-medium text-gray-800">{item.name}</h2>
+          <small class="text-sm text-gray-600">{item.time}</small>
+          <div class="mt-1">
+            {item.projects.map(project => (
+              <div>
+                <h3 class="text-2xl font-medium text-gray-600">{project.name}</h3>
+                <p>{project.details}</p>
+              </div>
+            ))}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>
