@@ -1,12 +1,12 @@
 ---
 import ModuleHeader from './ui/ModuleHeader.astro'
+import config from '../../meta.config';
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3', 'React']
 ---
 
 <div class="flex flex-col">
   <ModuleHeader title="Skill" />
-  <div class="flex lg:justify-start justify-center gap-2">
-    {skills.map(skill => <span class="rounded-full border px-4 text-sm py-2 font-medium bg-gray-200"> {skill} </span>)}
+  <div class="flex lg:justify-start justify-center gap-2 flex-wrap">
+    {config.skills.map(skill => <span class="rounded-full border px-4 text-sm py-2 font-medium bg-gray-200"> {skill} </span>)}
   </div>
 </div>

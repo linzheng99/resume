@@ -1,29 +1,20 @@
 ---
+import config from '../../meta.config';
 import ModuleHeader from "./ui/ModuleHeader.astro"
 
 interface Project {
-  name: String
-  details: String
+  name: string
+  details: string
 }
-const projects: Project[] = [
-  {
-    name: 'XXX项目',
-    details: 'XXXXXX'
-  },
-  {
-    name: 'XXX项目',
-    details: 'XXXXXX'
-  }
-]
 ---
 
 <div>
   <ModuleHeader title="开源项目" />
   <ul>
     {
-      projects.map(item => (
-      <li class="mb-4 text-center lg:text-left">
-          <h2 class="text-3xl font-medium text-gray-600">{item.name}</h2>
+      config.projects.map(item => (
+      <li class="mb-4">
+          <h2 class="text-2xl font-medium text-gray-600">{item.name}</h2>
           <div class="mt-1">
             <p>{item.details}</p>
           </div>

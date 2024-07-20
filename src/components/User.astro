@@ -10,17 +10,27 @@ interface Props {
     value: string
     url?: string
   }[]
+  connection: string
 }
 
-const { author, links } = Astro.props
+const { author, links, connection } = Astro.props
 ---
 
 <div class="border-solid border-zinc-100 lg:border-r lg:my-20 py-20 sm:px-40 text-center">
   <div class="sticky top-40">
-    <div class="flex flex-col items-center gap-4">
+    <div class="flex flex-col items-center gap-3">
       <Image src={Avatar} width="200" height="200" class="rounded-full bg-cover aspect-square object-cover my-8" loading="eager" alt="avatar" />
-      <div class="font-bold text-2xl">{author}</div>
-      {links?.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
+      <div class="flex flex-col gap-1">
+        <div class="font-bold text-2xl">{author}</div>
+        <div class="md:text-lg text-gray-800 font-bold">前端工程师</div>
+        <div class="md:text-lg text-gray-800 font-bold">三年工作经验</div>
+      </div>
+      <div class="lg:hidden">
+        <span>{connection}</span>
+      </div>
+      <div class="flex-col items-center gap-3 hidden lg:flex">
+        {links?.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
+      </div>
     </div>
   </div>
 </div>
