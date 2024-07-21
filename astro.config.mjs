@@ -4,6 +4,7 @@ import solid from '@astrojs/solid-js';
 import icon from 'astro-icon';
 
 export default defineConfig({
+  base: 'resume',
   integrations: [
     solid(),
     tailwind(),
