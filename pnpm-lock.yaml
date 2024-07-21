@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.5.8
     version: 0.5.10(typescript@5.5.3)
+  '@astrojs/image':
+    specifier: ^0.18.0
+    version: 0.18.0(astro@4.11.5)(sharp@0.33.4)
   '@astrojs/solid-js':
     specifier: ^4.4.0
     version: 4.4.0(solid-js@1.8.18)(vite@5.3.3)
@@ -20,6 +23,9 @@ dependencies:
   astro-icon:
     specifier: ^1.1.0
     version: 1.1.0
+  sharp:
+    specifier: ^0.33.4
+    version: 0.33.4
   solid-js:
     specifier: ^1.8.18
     version: 1.8.18
@@ -35,6 +41,10 @@ packages:
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==, tarball: https://registry.npmmirror.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz}
     engines: {node: '>=10'}
+    dev: false
+
+  /@altano/tiny-async-pool@1.0.3:
+    resolution: {integrity: sha512-B4lSen5B2M/aGtgQ12aJ9Ms4eZXCRtJMhM7p5KpAImPAeIaOojTWEKozIB/1xWwCLRZsy0SHW+OlOZQFOBOwJQ==, tarball: https://registry.npmmirror.com/@altano/tiny-async-pool/-/tiny-async-pool-1.0.3.tgz}
     dev: false
 
   /@ampproject/remapping@2.3.0:
@@ -75,6 +85,26 @@ packages:
 
   /@astrojs/compiler@2.8.2:
     resolution: {integrity: sha512-2v2N2oDnMH6+CX1Wn6f45Afa4tdkUMutdx8pJaokfaOYnAU+u6+UK7o7sXqydKro1cLwVmmOIJv6AqiXnAdLDA==, tarball: https://registry.npmmirror.com/@astrojs/compiler/-/compiler-2.8.2.tgz}
+    dev: false
+
+  /@astrojs/image@0.18.0(astro@4.11.5)(sharp@0.33.4):
+    resolution: {integrity: sha512-IAsECAGG5s0u7KItQMVVfhU8gAkIeIlzoSga6LymLvWvTWJacjxtnRYjct5uR03kuxIYAdjZhwQowKR1bYpwDA==, tarball: https://registry.npmmirror.com/@astrojs/image/-/image-0.18.0.tgz}
+    deprecated: '@astrojs/image is deprecated in favor of astro:assets. Please see the migration guide for more information: https://docs.astro.build/en/guides/upgrade-to/v3/\#removed-astrojsimage'
+    peerDependencies:
+      astro: ^2.10.15
+      sharp: '>=0.31.0'
+    peerDependenciesMeta:
+      sharp:
+        optional: true
+    dependencies:
+      '@altano/tiny-async-pool': 1.0.3
+      astro: 4.11.5(typescript@5.5.3)
+      http-cache-semantics: 4.1.1
+      image-size: 1.1.1
+      kleur: 4.1.5
+      magic-string: 0.30.10
+      mime: 3.0.0
+      sharp: 0.33.4
     dev: false
 
   /@astrojs/internal-helpers@0.4.1:
@@ -1747,7 +1777,6 @@ packages:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
     dev: false
-    optional: true
 
   /color@4.2.3:
     resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==, tarball: https://registry.npmmirror.com/color/-/color-4.2.3.tgz}
@@ -1757,7 +1786,6 @@ packages:
       color-convert: 2.0.1
       color-string: 1.9.1
     dev: false
-    optional: true
 
   /comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==, tarball: https://registry.npmmirror.com/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz}
@@ -1875,7 +1903,6 @@ packages:
     engines: {node: '>=8'}
     requiresBuild: true
     dev: false
-    optional: true
 
   /deterministic-object-hash@2.0.2:
     resolution: {integrity: sha512-KxektNH63SrbfUyDiwXqRb1rLwKt33AmMv+5Nhsw1kqZ13SJBRTgZHtGbE+hH3a1mVW1cz+4pqSWVPAtLVXTzQ==, tarball: https://registry.npmmirror.com/deterministic-object-hash/-/deterministic-object-hash-2.0.2.tgz}
@@ -2423,15 +2450,26 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: false
 
+  /image-size@1.1.1:
+    resolution: {integrity: sha512-541xKlUw6jr/6gGuk92F+mYM5zaFAc5ahphvkqvNe2bQ6gVBkd6bfrmVJ2t4KDAfikAYZyIqTnktX3i6/aQDrQ==, tarball: https://registry.npmmirror.com/image-size/-/image-size-1.1.1.tgz}
+    engines: {node: '>=16.x'}
+    hasBin: true
+    dependencies:
+      queue: 6.0.2
+    dev: false
+
   /import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==, tarball: https://registry.npmmirror.com/import-meta-resolve/-/import-meta-resolve-4.1.0.tgz}
+    dev: false
+
+  /inherits@2.0.4:
+    resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==, tarball: https://registry.npmmirror.com/inherits/-/inherits-2.0.4.tgz}
     dev: false
 
   /is-arrayish@0.3.2:
     resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==, tarball: https://registry.npmmirror.com/is-arrayish/-/is-arrayish-0.3.2.tgz}
     requiresBuild: true
     dev: false
-    optional: true
 
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==, tarball: https://registry.npmmirror.com/is-binary-path/-/is-binary-path-2.1.0.tgz}
@@ -3108,6 +3146,12 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /mime@3.0.0:
+    resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==, tarball: https://registry.npmmirror.com/mime/-/mime-3.0.0.tgz}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    dev: false
+
   /mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==, tarball: https://registry.npmmirror.com/mimic-fn/-/mimic-fn-2.1.0.tgz}
     engines: {node: '>=6'}
@@ -3553,6 +3597,12 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==, tarball: https://registry.npmmirror.com/queue-microtask/-/queue-microtask-1.2.3.tgz}
     dev: false
 
+  /queue@6.0.2:
+    resolution: {integrity: sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==, tarball: https://registry.npmmirror.com/queue/-/queue-6.0.2.tgz}
+    dependencies:
+      inherits: 2.0.4
+    dev: false
+
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==, tarball: https://registry.npmmirror.com/read-cache/-/read-cache-1.0.0.tgz}
     dependencies:
@@ -3809,7 +3859,6 @@ packages:
       '@img/sharp-win32-ia32': 0.33.4
       '@img/sharp-win32-x64': 0.33.4
     dev: false
-    optional: true
 
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==, tarball: https://registry.npmmirror.com/shebang-command/-/shebang-command-2.0.0.tgz}
@@ -3845,7 +3894,6 @@ packages:
     dependencies:
       is-arrayish: 0.3.2
     dev: false
-    optional: true
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==, tarball: https://registry.npmmirror.com/sisteransi/-/sisteransi-1.0.5.tgz}

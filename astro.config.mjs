@@ -2,10 +2,12 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import solid from '@astrojs/solid-js';
 import icon from 'astro-icon';
+import image from '@astrojs/image';
 
 export default defineConfig({
   base: 'resume',
   integrations: [
+    image(),
     solid(),
     tailwind(),
     icon({
