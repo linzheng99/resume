@@ -4,10 +4,8 @@ import solid from '@astrojs/solid-js';
 import icon from 'astro-icon';
 import image from '@astrojs/image';
 
-const publicPath = import.meta.env.PUBLIC_PATH
-
 export default defineConfig({
-  base: publicPath === 'production' ? 'resume' : '',
+  base: process.env.NODE_ENV === 'production' ? 'resume' : '',
   integrations: [
     image(),
     solid(),
