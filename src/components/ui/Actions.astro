@@ -1,0 +1,20 @@
+---
+import type { Project } from '../../../meta.config'
+
+interface Props {
+  data: Project[]
+}
+const { data } = Astro.props
+---
+
+<div>
+  <strong>行动:</strong>
+  {
+    data.map(item => (
+      <p>
+        <strong class="ml-4">{item.title}:</strong>
+        {item.details}
+      </p>
+    ))
+  }
+</div>

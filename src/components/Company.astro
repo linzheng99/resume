@@ -1,15 +1,7 @@
 ---
-import config from '../../meta.config';
+import config from '../../meta.config'
 import ModuleHeader from './ui/ModuleHeader.astro'
-
-interface Config {
-  name: string
-  time: string
-  projects: {
-    name: string
-    details: string
-  }[]
-}
+import CompanyProject from './ui/CompanyProject.astro'
 ---
 
 <div>
@@ -23,12 +15,16 @@ interface Config {
             <small class="text-sm text-gray-600">{company.time}</small>
           </div>
           <div class="mt-1">
-            {company.projects.map(project => (
-              <div>
-                <h3 class="text-2xl font-medium text-gray-600">{project.name}</h3>
-                <p>{project.details}</p>
-              </div>
-            ))}
+            {company.projects.map(project => {
+              const { name, situation, actions, result, task } = project
+              const details = {
+                situation,
+                task,
+                actions,
+                result
+              }
+              return <CompanyProject name={name} details={details} />
+            })}
           </div>
         </li>
       ))

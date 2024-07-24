@@ -1,0 +1,31 @@
+---
+import type { Project } from '../../../meta.config'
+import ProjectDetails from './ProjectDetails.astro'
+import Actions from './Actions.astro'
+
+interface Details {
+  situation: Project
+  task: Project
+  actions: Project[]
+  result: Project
+}
+interface Props {
+  name: string
+  details: Details
+}
+
+const {
+  name,
+  details: { situation, task, actions, result }
+} = Astro.props
+---
+
+<div>
+  <h3 class="text-2xl font-medium text-gray-600">{name}</h3>
+  <div class="flex flex-col gap-1">
+    <ProjectDetails data={situation} />
+    <ProjectDetails data={task} />
+    {actions.length && <Actions data={actions} />}
+    {result && <ProjectDetails data={result} />}
+  </div>
+</div>

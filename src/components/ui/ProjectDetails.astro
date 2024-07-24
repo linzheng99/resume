@@ -1,0 +1,15 @@
+---
+import type { Project } from '../../../meta.config'
+
+interface Props {
+  data: Project
+}
+const { data } = Astro.props
+---
+
+<div>
+  <p>
+    <strong>{data.title}:</strong>
+    {data.details}
+  </p>
+</div>
