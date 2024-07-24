@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets'
-import Avatar from '../../public/images/avatar.png'
 import SocialLink from './ui/SocialLink.astro'
 
 interface Props {
@@ -19,7 +18,14 @@ const { author, links, connection } = Astro.props
 <div class="border-solid border-zinc-100 lg:border-r lg:my-20 py-20 sm:px-40 text-center">
   <div class="sticky top-40">
     <div class="flex flex-col items-center gap-3">
-      <Image src="/images/avatar.png" width="200" height="200" class="rounded-full bg-cover aspect-square object-cover my-8" loading="eager" alt="avatar" />
+      <Image
+        src="https://avatars.githubusercontent.com/u/65697298?s=400&u=ec9c11ef741c11d826d29f94211fb75aacb2211f&v=4"
+        width="200"
+        height="200"
+        class="rounded-full bg-cover aspect-square object-cover my-8"
+        loading="eager"
+        alt="avatar"
+      />
       <div class="flex flex-col gap-1">
         <div class="font-bold text-2xl">{author}</div>
         <div class="md:text-lg text-gray-800 font-bold">前端工程师</div>
