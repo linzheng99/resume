@@ -11,8 +11,8 @@ const { data } = Astro.props
   <strong>行动:</strong>
   {
     data.map(item => (
-      <p>
-        <strong class="ml-4">{item.title}:</strong>
+      <p class="ml-4">
+        <strong>{item.title}:</strong>
         {item.details}
       </p>
     ))
