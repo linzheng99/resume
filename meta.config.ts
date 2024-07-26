@@ -106,11 +106,11 @@ const config: Config = {
           actions: [
             {
               title: '技术选型',
-              details: '项目使用 Vite 作为开发和生产构建的工具，核心框架为 Vue 3，使用 TypeScript 进行类型安全的开发，并基于 uni-app 进行微信小程序开发。UI 组件库采用 uView Plus，状态管理使用 Pinia，使用 Unocss 进行原子化 CSS 处理，确保开发效率和代码质量。'
+              details: '项目使用 Vite 作为开发和生产构建的工具，核心框架为 Vue3，使用 TypeScript 进行类型安全的开发，并基于 uni-app 进行微信小程序开发。UI 组件库采用 uView Plus，状态管理使用 Pinia，使用 Unocss 进行原子化 CSS 处理，确保开发效率和代码质量。'
             },
             {
               title: '开发',
-              details: '对 uView UI组件库进行二次封装，减少重复开发，提升开发速度；将功能模块化，便于独立开发和测试，提高代码的可维护性；'
+              details: '对 uView Plus UI组件库进行二次封装，减少重复开发，提升开发速度；将功能模块化，便于独立开发和测试，提高代码的可维护性；'
             },
             {
               title: '反馈与优化',

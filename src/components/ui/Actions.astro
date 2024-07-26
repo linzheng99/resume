@@ -1,10 +1,12 @@
 ---
 import type { Project } from '../../../meta.config'
+import MatchString from './MatchString'
 
 interface Props {
   data: Project[]
 }
 const { data } = Astro.props
+const matchs = ['TypeScript', 'Vue3', 'Vue2', 'React', 'Vite', 'Unocss', 'uni-app', 'Pinia', 'uView Plus', 'Naive UI', 'axios', 'dayjs', 'lodash']
 ---
 
 <div>
@@ -13,7 +15,7 @@ const { data } = Astro.props
     data.map(item => (
       <p class="ml-4">
         <strong>{item.title}:</strong>
-        {item.details}
+        <MatchString details={item.details} matchs={matchs} />
       </p>
     ))
   }
