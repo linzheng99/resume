@@ -175,14 +175,14 @@ const config: Config = {
   ],
   // 个人开源项目
   projects: [
-    {
-      title: 'tob后台管理项目',
-      details: 'XXXXXX'
-    },
-    {
-      title: '地图组件库',
-      details: 'XXXXXX'
-    }
+    // {
+    //   title: 'tob后台管理项目',
+    //   details: 'XXXXXX'
+    // },
+    // {
+    //   title: '地图组件库',
+    //   details: 'XXXXXX'
+    // }
   ],
   // 技能
   skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'Eslint', 'Nodejs', 'Git', 'uni-app'],

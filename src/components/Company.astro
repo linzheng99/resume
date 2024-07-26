@@ -6,10 +6,10 @@ import CompanyProject from './ui/CompanyProject.astro'
 
 <div>
   <ModuleHeader title="工作经历" />
-  <ul>
+  <ul class="flex flex-col gap-4">
     {
       config.companies.map(company => (
-        <li class="mb-4">
+        <li>
           <div class="text-center lg:text-left">
             <h2 class="text-3xl font-medium text-gray-800">{company.name}</h2>
             <small class="text-sm text-gray-600">{company.time}</small>

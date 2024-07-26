@@ -6,8 +6,8 @@ import Actions from './Actions.astro'
 interface Details {
   situation: Project
   task: Project
-  actions: Project[]
-  result: Project
+  actions?: Project[]
+  result?: Project
 }
 interface Props {
   name: string
@@ -25,7 +25,7 @@ const {
   <div class="flex flex-col gap-1">
     <ProjectDetails data={situation} />
     <ProjectDetails data={task} />
-    {actions.length && <Actions data={actions} />}
+    {actions?.length && <Actions data={actions} />}
     {result && <ProjectDetails data={result} />}
   </div>
 </div>

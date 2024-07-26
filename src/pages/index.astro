@@ -14,7 +14,7 @@ import Education from '../components/Education.astro'
 	<div class="lg:my-20 mx-6 lg:mx-8 flex flex-col overflow-x-hidden gap-4">
 		<Introduce />
 		<Company />
-		<OpenSource />
+		{ config.projects.length ? <OpenSource /> : ''}
 		<Skills />
 		<Education />
 	</div>
