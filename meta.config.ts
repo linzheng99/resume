@@ -2,6 +2,13 @@ export interface Project {
   title: string
   details: string
 }
+interface Details {
+  name: string
+  situation: Project
+  task: Project
+  actions?: Project[]
+  result?: Project
+}
 interface Config {
   name: string
   connection: string
@@ -14,15 +21,9 @@ interface Config {
   companies: {
     name: string
     time: string
-    projects: {
-      name: string
-      situation: Project
-      task: Project
-      actions?: Project[]
-      result?: Project
-    }[]
+    projects: Details[]
   }[]
-  projects: Project[]
+  projects: Details[]
   skills: string[]
   educations: {
     time: string
@@ -34,7 +35,7 @@ interface Config {
 
 const config: Config = {
   // 名字
-  name: 'Lin Zheng',
+  name: '林王磊',
   // 联系方式
   connection: '( wx: linzheng-99 )',
   links: [
@@ -175,10 +176,27 @@ const config: Config = {
   ],
   // 个人开源项目
   projects: [
-    // {
-    //   title: 'tob后台管理项目',
-    //   details: 'XXXXXX'
-    // },
+    {
+      name: 'tob后台管理项目',
+      situation: {
+        title: '背景',
+        details: '12'
+      },
+      task: {
+        title: '任务',
+        details: '12'
+      },
+      actions: [
+        {
+          title: '技术选型与开发',
+          details: '123'
+        }
+      ],
+      result: {
+        title: '结果',
+        details: '123'
+      }
+    },
     // {
     //   title: '地图组件库',
     //   details: 'XXXXXX'

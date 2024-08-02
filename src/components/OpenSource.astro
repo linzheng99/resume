@@ -1,5 +1,6 @@
 ---
 import config from '../../meta.config'
+import CompanyProject from './ui/CompanyProject.astro'
 import ModuleHeader from './ui/ModuleHeader.astro'
 ---
 
@@ -7,14 +8,22 @@ import ModuleHeader from './ui/ModuleHeader.astro'
   <ModuleHeader title="开源项目" />
   <ul>
     {
-      config.projects.map(item => (
-        <li class="mb-4">
-          <h2 class="text-2xl font-medium text-gray-600">{item.title}</h2>
-          <div class="mt-1">
-            <p>{item.details}</p>
-          </div>
-        </li>
-      ))
+      config.projects.map(item => {
+        const { name, situation, actions, result, task } = item
+        const details = {
+          situation,
+          task,
+          actions,
+          result
+        }
+        return (
+          <li class="mb-4">
+            <div class="mt-1">
+              <CompanyProject name={name} details={details} />
+            </div>
+          </li>
+        )
+      })
     }
   </ul>
 </div>
