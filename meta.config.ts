@@ -4,6 +4,7 @@ export interface Project {
 }
 interface Details {
   name: string
+  is?: string
   situation: Project
   task: Project
   actions?: Project[]
@@ -67,22 +68,27 @@ const config: Config = {
       projects: [
         {
           name: '物联网管理平台',
+          is: '(PC & H5)',
           situation: {
             title: '背景',
-            details: '随着物联网（IOT）技术的迅速普及，越来越多的设备和传感器被联网，产生了大量的数据。用户需要一个高效的管理平台来统一管理这些设备。所以需要一个平台提供了对设备的管理、实时状态的监控、数据的分析展示以及设备异常的报警通知功能。通过这些功能，我们希望为用户提供高效、便捷的物联网设备管理体验，提升设备操作效率和数据管理能力。'
+            details: '随着物联网（IOT）技术的普及，联网设备和传感器产生大量数据。用户需要一个平台统一管理设备，进行实时监控、数据分析展示和异常报警通知，提升设备操作效率和数据管理能力，提供高效便捷的管理体验。'
           },
           task: {
             title: '任务',
-            details: '独自负责前端开发，设计和实现所有功能，确保用户界面友好和高效。我与UI设计师紧密合作，确保界面视觉效果一致且吸引人。同时，我确保后台能够正确处理和存储用户的数据，并与后端团队密切合作，保证数据的准确性和系统的稳定性。'
+            details: '独自负责前端开发，设计和实现所有功能，确保用户界面友好和高效。与UI设计师紧密合作，确保界面视觉效果一致且吸引人。同时，我确保后台能够正确处理和存储用户的数据，并与后端团队密切合作，保证数据的准确性和系统的稳定性。'
           },
           actions: [
             {
-              title: '技术选型',
+              title: '技术选型(PC)',
               details: '项目使用 Vite 作为开发和生产构建的工具，核心框架为 Vue3，使用 TypeScript 进行类型安全的开发，并搭配 Naive UI 作为 UI 组件库，采用 Pinia 进行状态管理，辅助工具包括 axios、dayjs、lodash等等实用工具库，确保开发效率和代码质量。'
             },
             {
+              title: '技术选型(H5)',
+              details: '核心框架为 Vue2，并搭配 Vant 作为 UI 组件库，采用 Vuex 进行状态管理。'
+            },
+            {
               title: '开发',
-              details: '对 Naive UI组件库进行二次封装；项目涉及到对设备的定位管理，使用高德开放平台的 地图JSAPI，对高德地图进行二次封装；减少重复开发，提升开发速度。'
+              details: '对 Naive UI 组件库进行二次封装；项目涉及到对设备的定位管理，使用高德开放平台的 地图JSAPI，对高德地图进行二次封装；减少重复开发，提升开发速度。'
             },
             {
               title: '反馈与优化',
@@ -91,14 +97,15 @@ const config: Config = {
           ],
           result: {
             title: '结果',
-            details: '物联网管理平台能够为用户提供高效、便捷的物联网设备管理体验，提升设备操作效率和数据管理能力。'
+            details: '平台能够为用户提供高效、便捷的物联网设备管理体验，提升设备操作效率和数据管理能力。'
           }
         },
         {
           name: '数字龙舟智控平台',
+          is: '(小程序)',
           situation: {
             title: '背景',
-            details: '随着社会经济的发展和健康生活方式的追求，龙舟活动从传统节日拓展至日常运动，但安全隐患增加。为了推动龙舟运动有序发展、提高安全性、推广龙舟文化，我们提出建设数字龙舟智控平台。该平台利用公安视频监控、RFID感应和移动端定位技术，实现龙舟活动的实时监控与精密管理，确保各乡镇社区的规范管理和安全监督。'
+            details: '龙舟活动已从传统节日扩展至日常运动，但安全隐患增加。为促进有序发展、提高安全性和推广龙舟文化，用户需要一个平台进行管理，利用视频监控、RFID感应和移动端定位技术，实现实时监控和精密管理。'
           },
           task: {
             title: '任务',
@@ -120,7 +127,7 @@ const config: Config = {
           ],
           result: {
             title: '结果',
-            details: '数字龙舟智控平台不仅提升了龙舟活动的安全性和管理水平，还推动了龙舟文化的传播和全民参与，取得了社会和文化效益的双重提升。'
+            details: '平台不仅提升了龙舟活动的安全性和管理水平，还推动了龙舟文化的传播和全民参与，取得了社会和文化效益的双重提升。'
           }
         },
         // {
@@ -152,6 +159,7 @@ const config: Config = {
       projects: [
         {
           name: 'CJDropshipping',
+          is: '( PC )',
           situation: {
             title: '背景',
             details: '国内外电商平台，合作对接数千家制造商，以工厂价格采购产品，轻松将产品快速上架到您的店铺。尽享批发功能、预订库存、质量检查、全球仓库履行和高效交付服务。免安装费、免月费，免最低订单量。'
@@ -177,24 +185,40 @@ const config: Config = {
   // 个人开源项目
   projects: [
     {
-      name: 'tob后台管理项目',
+      name: '中后台管理系统',
       situation: {
         title: '背景',
-        details: '12'
+        details: '希望深入了解前端项目的搭建及工程化。此项目的目的是封装和解决在日常业务项目中遇到的一些重复功能点和难点'
       },
       task: {
         title: '任务',
-        details: '12'
+        details: '构建一个模板项目，包含前端项目的核心结构和常用功能模块，方便在未来的项目中复用和快速启动。同时，这个项目也应该能够支持现代前端开发的最佳实践和工具。'
       },
       actions: [
         {
-          title: '技术选型与开发',
-          details: '123'
+          title: '1',
+          details: '使用 Vite 作为开发和构建工具，优化构建速度和开发体验'
+        },
+        {
+          title: '2',
+          details: '使用了 Vue3 作为核心框架，并配合使用 vue-router 和 Pinia 进行状态管理'
+        },
+        {
+          title: '3',
+          details: '封装 axios、Echarts、Naive UI 等，以提升项目功能和开发效率'
+        },
+        {
+          title: '4',
+          details: '集成了 ESLint 进行代码质量检查和格式化'
+        },
+        {
+          title: '5',
+          details: '采用 VitePress 进行项目文档的开发和构建'
         }
       ],
       result: {
         title: '结果',
-        details: '123'
+        details: '创建了一个结构较清晰的前端模板项目。它提高了日常开发效率。这个模板项目为你和团队提供了一些帮助，可以在未来的项目中快速启动，并保证代码的一致性和高质量。'
       }
     },
     // {
@@ -203,7 +227,7 @@ const config: Config = {
     // }
   ],
   // 技能
-  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'Eslint', 'Nodejs', 'Git', 'uni-app'],
+  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app'],
   // 教育经历
   educations: [
     {

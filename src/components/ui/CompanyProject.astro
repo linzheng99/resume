@@ -11,17 +11,22 @@ interface Details {
 }
 interface Props {
   name: string
+  is?: string
   details: Details
 }
 
 const {
   name,
+  is,
   details: { situation, task, actions, result }
 } = Astro.props
 ---
 
 <div>
-  <h3 class="text-2xl font-medium text-gray-600">{name}</h3>
+  <div class="flex justify-between items-center">
+    <h3 class="text-2xl font-medium text-gray-600">{name}</h3>
+    <span class="font-medium text-gray-600">{is}</span>
+  </div>
   <div class="flex flex-col gap-1">
     <ProjectDetails data={situation} />
     <ProjectDetails data={task} />
