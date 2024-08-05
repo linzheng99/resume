@@ -2,7 +2,7 @@ export interface Project {
   title: string
   details: string
 }
-interface Link {
+export interface Link {
   icon: string
   value: string
   url?: string
@@ -67,7 +67,7 @@ const config: Config = {
     }
   ],
   // 个人介绍
-  introduce: '我对新技术保持着浓厚的兴趣和学习热情，愿意投入时间和精力研究与应用最新技术，不断提升自己的能力。我严格遵循代码规范和最佳实践，确保代码的可读性、可维护性和可靠性。同时，我注重用户体验设计，重视团队合作与沟通，善于与同事分享知识和经验，共同解决问题。在项目中，我积极主动承担任务，及时反馈问题和进展。',
+  introduce: '对新技术保持着浓厚的兴趣和学习热情，愿意投入时间和精力研究与应用最新技术，不断提升自己的能力。我严格遵循代码规范和最佳实践，确保代码的可读性、可维护性和可靠性。同时，我注重用户体验设计，重视团队合作与沟通，善于与同事分享知识和经验，共同解决问题。在项目中，我积极主动承担任务，及时反馈问题和进展。',
   // 公司
   companies: [
     {
@@ -194,6 +194,11 @@ const config: Config = {
   projects: [
     {
       name: '中后台管理系统',
+      link: {
+        icon: 'link',
+        value: '预览链接',
+        url: 'https://linzheng99.github.io/tob-front-end-template'
+      },
       situation: {
         title: '背景',
         details: '希望深入了解前端项目的搭建及工程化。此项目的目的是封装和解决在日常业务项目中遇到的一些重复功能点和难点'
@@ -235,7 +240,7 @@ const config: Config = {
     // }
   ],
   // 技能
-  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app'],
+  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app', '小程序'],
   // 其他链接
   otherLinks: [
     {

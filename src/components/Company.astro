@@ -16,14 +16,14 @@ import CompanyProject from './ui/CompanyProject.astro'
           </div>
           <div class="mt-1">
             {company.projects.map(project => {
-              const { name, is, situation, actions, result, task } = project
+              const { name, is, link, situation, actions, result, task } = project
               const details = {
                 situation,
                 task,
                 actions,
                 result
               }
-              return <CompanyProject name={name} is={is} details={details} />
+              return <CompanyProject name={name} is={is} details={details} link={link} />
             })}
           </div>
         </li>

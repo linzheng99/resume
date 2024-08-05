@@ -1,7 +1,8 @@
 ---
-import type { Project } from '../../../meta.config'
+import type { Link, Project } from '../../../meta.config'
 import ProjectDetails from './ProjectDetails.astro'
 import Actions from './Actions.astro'
+import SocialLink from './SocialLink.astro'
 
 interface Details {
   situation: Project
@@ -12,12 +13,14 @@ interface Details {
 interface Props {
   name: string
   is?: string
+  link?: Link
   details: Details
 }
 
 const {
   name,
   is,
+  link,
   details: { situation, task, actions, result }
 } = Astro.props
 ---
@@ -25,7 +28,10 @@ const {
 <div>
   <div class="flex justify-between items-center">
     <h3 class="text-2xl font-medium text-gray-600">{name}</h3>
-    <span class="font-medium text-gray-600">{is}</span>
+    <div>
+      <span class="font-medium text-gray-600">{is}</span>
+      {link && <SocialLink icon={link.icon} value={link.value} url={link.url} />}
+    </div>
   </div>
   <div class="flex flex-col gap-1">
     <ProjectDetails data={situation} />

@@ -9,7 +9,7 @@ import ModuleHeader from './ui/ModuleHeader.astro'
   <ul>
     {
       config.projects.map(item => {
-        const { name, situation, actions, result, task } = item
+        const { name, is, link, situation, actions, result, task } = item
         const details = {
           situation,
           task,
@@ -19,7 +19,7 @@ import ModuleHeader from './ui/ModuleHeader.astro'
         return (
           <li class="mb-4">
             <div class="mt-1">
-              <CompanyProject name={name} details={details} />
+              <CompanyProject name={name} details={details} link={link} />
             </div>
           </li>
         )
