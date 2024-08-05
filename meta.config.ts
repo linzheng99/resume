@@ -2,9 +2,15 @@ export interface Project {
   title: string
   details: string
 }
+interface Link {
+  icon: string
+  value: string
+  url?: string
+}
 interface Details {
   name: string
   is?: string
+  link?: Link
   situation: Project
   task: Project
   actions?: Project[]
@@ -13,11 +19,7 @@ interface Details {
 interface Config {
   name: string
   connection: string
-  links?: {
-    icon: string
-    value: string
-    url?: string
-  }[]
+  links?: Link[]
   introduce: string
   companies: {
     name: string
@@ -26,6 +28,7 @@ interface Config {
   }[]
   projects: Details[]
   skills: string[]
+  otherLinks?: Link[]
   educations: {
     time: string
     school: string
@@ -56,10 +59,15 @@ const config: Config = {
       icon: 'github',
       value: 'GitHub',
       url: 'https://github.com/linzheng99'
+    },
+    {
+      icon: 'person',
+      value: 'linzheng99.top',
+      url: 'https://linzheng99.top'
     }
   ],
   // 个人介绍
-  introduce: '对前端开发充满热情，保持对新技术的好奇和学习热情，愿意投入时间和精力研究与应用最新技术，提升自己。严格遵循代码规范和最佳实践，确保代码的可读性、可维护性和可靠性。注重用户体验设计。重视团队合作和沟通，善于与同事分享知识和经验，共同解决问题。在项目中积极主动地承担任务，及时反馈问题和进展。',
+  introduce: '我对新技术保持着浓厚的兴趣和学习热情，愿意投入时间和精力研究与应用最新技术，不断提升自己的能力。我严格遵循代码规范和最佳实践，确保代码的可读性、可维护性和可靠性。同时，我注重用户体验设计，重视团队合作与沟通，善于与同事分享知识和经验，共同解决问题。在项目中，我积极主动承担任务，及时反馈问题和进展。',
   // 公司
   companies: [
     {
@@ -68,7 +76,7 @@ const config: Config = {
       projects: [
         {
           name: '物联网管理平台',
-          is: '(PC & H5)',
+          is: '( PC & H5 )',
           situation: {
             title: '背景',
             details: '随着物联网（IOT）技术的普及，联网设备和传感器产生大量数据。用户需要一个平台统一管理设备，进行实时监控、数据分析展示和异常报警通知，提升设备操作效率和数据管理能力，提供高效便捷的管理体验。'
@@ -102,7 +110,7 @@ const config: Config = {
         },
         {
           name: '数字龙舟智控平台',
-          is: '(小程序)',
+          is: '( 小程序 )',
           situation: {
             title: '背景',
             details: '龙舟活动已从传统节日扩展至日常运动，但安全隐患增加。为促进有序发展、提高安全性和推广龙舟文化，用户需要一个平台进行管理，利用视频监控、RFID感应和移动端定位技术，实现实时监控和精密管理。'
@@ -228,6 +236,19 @@ const config: Config = {
   ],
   // 技能
   skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app'],
+  // 其他链接
+  otherLinks: [
+    {
+      icon: 'github',
+      value: 'GitHub',
+      url: 'https://github.com/linzheng99'
+    },
+    {
+      icon: 'person',
+      value: 'linzheng99.top',
+      url: 'https://linzheng99.top'
+    }
+  ],
   // 教育经历
   educations: [
     {
