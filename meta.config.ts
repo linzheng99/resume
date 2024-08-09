@@ -10,7 +10,7 @@ export interface Link {
 interface Details {
   name: string
   is?: string
-  link?: Link
+  links?: Link[]
   situation: Project
   task: Project
   actions?: Project[]
@@ -194,11 +194,18 @@ const config: Config = {
   projects: [
     {
       name: '中后台管理系统',
-      link: {
-        icon: 'link',
-        value: '预览链接',
-        url: 'https://linzheng99.github.io/tob-front-end-template'
-      },
+      links: [
+        {
+          icon: 'link',
+          value: '文档链接',
+          url: 'https://linzheng99.github.io/tob-docs-site'
+        },
+        {
+          icon: 'link',
+          value: '预览链接',
+          url: 'https://linzheng99.github.io/tob-front-end-template'
+        }
+      ],
       situation: {
         title: '背景',
         details: '希望深入了解前端项目的搭建及工程化。此项目的目的是封装和解决在日常业务项目中遇到的一些重复功能点和难点'

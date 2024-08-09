@@ -13,14 +13,14 @@ interface Details {
 interface Props {
   name: string
   is?: string
-  link?: Link
+  links?: Link[]
   details: Details
 }
 
 const {
   name,
   is,
-  link,
+  links,
   details: { situation, task, actions, result }
 } = Astro.props
 ---
@@ -28,9 +28,9 @@ const {
 <div>
   <div class="flex justify-between items-center">
     <h3 class="text-2xl font-medium text-gray-600">{name}</h3>
-    <div>
+    <div class="flex gap-2">
       <span class="font-medium text-gray-600">{is}</span>
-      {link && <SocialLink icon={link.icon} value={link.value} url={link.url} />}
+      {links && links.length && links.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
     </div>
   </div>
   <div class="flex flex-col gap-1">
