@@ -247,7 +247,7 @@ const config: Config = {
     // }
   ],
   // 技能
-  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app', '小程序'],
+  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app', '小程序', 'Vim'],
   // 其他链接
   otherLinks: [
     {
