@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import SocialLink from './ui/SocialLink.astro'
+import type { Link } from '../../meta.config'
 
 interface Props {
   author: string
@@ -9,7 +10,7 @@ interface Props {
     value: string
     url?: string
   }[]
-  connection: string
+  connection: Link[]
 }
 
 const { author, links, connection } = Astro.props
@@ -31,8 +32,8 @@ const { author, links, connection } = Astro.props
         <div class="md:text-lg text-gray-800 font-bold">前端工程师</div>
         <div class="md:text-lg text-gray-800 font-bold">三年工作经验</div>
       </div>
-      <div class="lg:hidden">
-        <span>{connection}</span>
+      <div class="lg:hidden grid grid-cols-2 gap-2">
+        {connection?.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
       </div>
       <div class="flex-col items-center gap-3 hidden lg:flex">
         {links?.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}

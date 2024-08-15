@@ -18,7 +18,7 @@ interface Details {
 }
 interface Config {
   name: string
-  connection: string
+  connection: Link[]
   links?: Link[]
   introduce: string
   companies: {
@@ -41,7 +41,16 @@ const config: Config = {
   // 名字
   name: '林王磊',
   // 联系方式
-  connection: '( wx: linzheng-99 )',
+  connection: [
+    {
+      icon: 'weixin',
+      value: 'linzheng-99'
+    },
+    {
+      icon: 'phone',
+      value: '13868729045'
+    },
+  ],
   links: [
     {
       icon: 'location',
