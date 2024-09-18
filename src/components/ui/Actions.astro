@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 import type { Project } from '../../../meta.config'
 import MatchString from './MatchString'
 
@@ -6,16 +7,42 @@ interface Props {
   data: Project[]
 }
 const { data } = Astro.props
-const matchs = ['TypeScript', 'Vue3', 'Vue2', 'React', 'VitePress', 'Vite', 'Unocss', 'uni-app', 'Pinia', 'uView Plus', 'Naive UI', 'axios', 'dayjs', 'lodash', 'ESLint', 'Echarts', 'vue-router', 'Vant', 'Vuex']
+const matchs = [
+  'TypeScript',
+  'Vue3',
+  'Vue2',
+  'React',
+  'VitePress',
+  'Vite',
+  'Unocss',
+  'uni-app',
+  'Pinia',
+  'uView Plus',
+  'Naive UI',
+  'axios',
+  'dayjs',
+  'lodash',
+  'ESLint',
+  'Echarts',
+  'vue-router',
+  'Vant',
+  'Vuex'
+]
 ---
 
 <div>
-  <strong>行动:</strong>
+  <strong>行动</strong>
   {
     data.map(item => (
       <p class="ml-4">
-        <strong>{item.title}:</strong>
-        <MatchString details={item.details} matchs={matchs} />
+        <div class="flex">
+          <div class="mr-1 mt-1">
+            <Icon name="leaf" />
+          </div>
+          <div>
+            <MatchString details={item.details} matchs={matchs} />
+          </div>
+        </div>
       </p>
     ))
   }

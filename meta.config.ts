@@ -44,7 +44,11 @@ const config: Config = {
   connection: [
     {
       icon: 'weixin',
-      value: 'linzheng-99'
+      value: '13868729045'
+    },
+    {
+      icon: 'email',
+      value: 'alidlg9045@126.com'
     },
     {
       icon: 'phone',
@@ -57,23 +61,27 @@ const config: Config = {
       value: 'WenZhou'
     },
     {
+      icon: 'phone',
+      value: '13868729045'
+    },
+    {
       icon: 'weixin',
-      value: 'linzheng-99'
+      value: '13868729045'
     },
     {
       icon: 'email',
-      value: 'linzheng9045@gmail.com'
+      value: 'alidlg9045@126.com'
     },
     {
       icon: 'github',
       value: 'GitHub',
       url: 'https://github.com/linzheng99'
     },
-    {
-      icon: 'person',
-      value: 'linzheng99.top',
-      url: 'https://linzheng99.top'
-    }
+    // {
+    //   icon: 'person',
+    //   value: 'linzheng99.top',
+    //   url: 'https://linzheng99.top'
+    // }
   ],
   // 个人介绍
   introduce: '对新技术保持着浓厚的兴趣和学习热情，愿意投入时间和精力研究与应用最新技术，不断提升自己的能力。我严格遵循代码规范和最佳实践，确保代码的可读性、可维护性和可靠性。同时，我注重用户体验设计，重视团队合作与沟通，善于与同事分享知识和经验，共同解决问题。在项目中，我积极主动承担任务，及时反馈问题和进展。',
@@ -81,11 +89,11 @@ const config: Config = {
   companies: [
     {
       name: '融威科技有限公司',
-      time: '2021年6月 - 2024年7月',
+      time: '2021/06 - 2024/07',
       projects: [
         {
           name: '物联网管理平台',
-          is: '( PC & H5 )',
+          is: '( PC )',
           situation: {
             title: '背景',
             details: '随着物联网（IOT）技术的普及，联网设备和传感器产生大量数据。用户需要一个平台统一管理设备，进行实时监控、数据分析展示和异常报警通知，提升设备操作效率和数据管理能力，提供高效便捷的管理体验。'
@@ -100,26 +108,18 @@ const config: Config = {
               details: '项目使用 Vite 作为开发和生产构建的工具，核心框架为 Vue3，使用 TypeScript 进行类型安全的开发，并搭配 Naive UI 作为 UI 组件库，采用 Pinia 进行状态管理，辅助工具包括 axios、dayjs、lodash等等实用工具库，确保开发效率和代码质量。'
             },
             {
-              title: '技术选型(H5)',
-              details: '核心框架为 Vue2，并搭配 Vant 作为 UI 组件库，采用 Vuex 进行状态管理。'
-            },
-            {
               title: '开发',
               details: '对 Naive UI 组件库进行二次封装；项目涉及到对设备的定位管理，使用高德开放平台的 地图JSAPI，对高德地图进行二次封装；减少重复开发，提升开发速度。'
             },
-            {
-              title: '反馈与优化',
-              details: '在内部测试阶段收集用户反馈，并根据反馈进行优化和调整。'
-            }
           ],
           result: {
             title: '结果',
-            details: '平台能够为用户提供高效、便捷的物联网设备管理体验，提升设备操作效率和数据管理能力。'
+            details: '平台能够为用户提供高效、便捷的物联网设备管理体验，提升设备操作效率和数据管理能力。为内部人员解决效率问题。'
           }
         },
         {
           name: '数字龙舟智控平台',
-          is: '( 小程序 )',
+          is: '( 微信小程序 )',
           situation: {
             title: '背景',
             details: '龙舟活动已从传统节日扩展至日常运动，但安全隐患增加。为促进有序发展、提高安全性和推广龙舟文化，用户需要一个平台进行管理，利用视频监控、RFID感应和移动端定位技术，实现实时监控和精密管理。'
@@ -137,10 +137,6 @@ const config: Config = {
               title: '开发',
               details: '对 uView Plus UI组件库进行二次封装，减少重复开发，提升开发速度；将功能模块化，便于独立开发和测试，提高代码的可维护性；'
             },
-            {
-              title: '反馈与优化',
-              details: '在内部测试阶段收集用户反馈，并根据反馈进行优化和调整。'
-            }
           ],
           result: {
             title: '结果',
@@ -172,7 +168,7 @@ const config: Config = {
     },
     {
       name: '杭州促极科技有限公司',
-      time: '2020年9月 - 2021年3月',
+      time: '2020/09 - 2021/03',
       projects: [
         {
           name: 'CJDropshipping',
@@ -188,7 +184,7 @@ const config: Config = {
           actions: [
             {
               title: '技术选型与开发',
-              details: '使用 React 及 Angular 对任务进行开发'
+              details: '使用 React 对任务进行开发'
             }
           ],
           result: {
@@ -204,16 +200,21 @@ const config: Config = {
     {
       name: '中后台管理系统',
       links: [
+        // {
+        //   icon: 'link',
+        //   value: '文档链接',
+        //   url: 'https://linzheng99.github.io/tob-docs-site'
+        // },
         {
           icon: 'link',
-          value: '文档链接',
-          url: 'https://linzheng99.github.io/tob-docs-site'
+          value: 'web预览链接',
+          url: 'http://118.31.0.102:3005/'
         },
         {
           icon: 'link',
-          value: '预览链接',
-          url: 'https://linzheng99.github.io/tob-front-end-template'
-        }
+          value: 'nest仓库地址',
+          url: 'https://github.com/linzheng99/tob-nest-template'
+        },
       ],
       situation: {
         title: '背景',
@@ -256,7 +257,7 @@ const config: Config = {
     // }
   ],
   // 技能
-  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app', '小程序', 'Vim'],
+  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app', '微信小程序', 'Vim'],
   // 其他链接
   otherLinks: [
     {
@@ -264,11 +265,11 @@ const config: Config = {
       value: 'GitHub',
       url: 'https://github.com/linzheng99'
     },
-    {
-      icon: 'person',
-      value: 'linzheng99.top',
-      url: 'https://linzheng99.top'
-    }
+    // {
+    //   icon: 'person',
+    //   value: 'linzheng99.top',
+    //   url: 'https://linzheng99.top'
+    // }
   ],
   // 教育经历
   educations: [

@@ -16,7 +16,7 @@ interface Props {
 const { author, links, connection } = Astro.props
 ---
 
-<div class="border-solid border-zinc-100 lg:border-r lg:my-20 lg:py-20 sm:py-10 sm:px-40 text-center">
+<div class="border-dashed border-black lg:border-r lg:my-20 lg:py-20 sm:py-10 sm:px-40 text-center">
   <div class="sticky top-40">
     <div class="flex flex-col items-center gap-3">
       <Image
@@ -29,14 +29,13 @@ const { author, links, connection } = Astro.props
       />
       <div class="lg:flex flex-col gap-1 hidden">
         <div class="font-bold text-2xl">{author}</div>
-        <div class="md:text-lg text-gray-800 font-bold">前端开发</div>
-        <div class="md:text-lg text-gray-800 font-bold">三年工作经验</div>
+        <div class="md:text-lg text-gray-800 font-bold">前端开发 / 三年经验</div>
       </div>
       <div class="sm:flex flex-col gap-1 lg:hidden">
         <div class="font-bold text-2xl">{author}</div>
-        <div class="md:text-lg text-gray-800 font-bold">前端开发 / 三年工作经验</div>
+        <div class="md:text-lg text-gray-800 font-bold">前端开发 / 三年经验</div>
       </div>
-      <div class="lg:hidden grid grid-cols-2 gap-2">
+      <div class="lg:hidden flex gap-4">
         {connection?.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
       </div>
       <div class="flex-col items-center gap-3 hidden lg:flex">

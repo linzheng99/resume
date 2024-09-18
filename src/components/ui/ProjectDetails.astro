@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 import type { Project } from '../../../meta.config'
 
 interface Props {
@@ -8,8 +9,15 @@ const { data } = Astro.props
 ---
 
 <div>
-  <p>
-    <strong>{data.title}:</strong>
-    {data.details}
+  <p class="text-base flex flex-col">
+    <strong class="text-gray-600">{data.title}</strong>
+    <div class="flex">
+      <div class="mr-1 mt-1">
+        <Icon name="leaf"/>
+      </div>
+      <p>
+        {data.details}
+      </p>
+    </div>
   </p>
 </div>

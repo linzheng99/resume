@@ -10,9 +10,9 @@ import CompanyProject from './ui/CompanyProject.astro'
     {
       config.companies.map(company => (
         <li>
-          <div class="text-center lg:text-left">
-            <h2 class="text-3xl font-medium text-gray-800">{company.name}</h2>
-            <small class="text-sm text-gray-600">{company.time}</small>
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-medium text-gray-800">{company.name}</h2>
+            <small class="text-base text-gray-600">{company.time}</small>
           </div>
           <div class="mt-1">
             {company.projects.map(project => {

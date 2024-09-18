@@ -27,7 +27,7 @@ const {
 
 <div>
   <div class="flex justify-between items-center">
-    <h3 class="text-2xl font-medium text-gray-600">{name}</h3>
+    <h3 class="text-lg font-medium text-gray-600">{name}</h3>
     <div class="flex gap-2">
       <span class="font-medium text-gray-600">{is}</span>
       {links && links.length && links.map(link => <SocialLink icon={link.icon} value={link.value} url={link.url} />)}
