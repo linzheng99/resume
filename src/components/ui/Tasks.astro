@@ -3,19 +3,21 @@ import type { Project } from '../../../meta.config'
 import PrefixIcon from './PrefixIcon.astro'
 
 interface Props {
-  data: Project
+  data: Project[]
 }
 const { data } = Astro.props
 ---
 
 <div>
   <p class="text-base flex flex-col">
-    <strong class="text-gray-600">{data?.title}</strong>
-    <div class="flex">
-      <PrefixIcon />
-      <p>
-        {data.details}
-      </p>
-    </div>
+    <strong class="text-gray-600">任务</strong>
+    {
+      data.map(i => (
+        <div class="flex">
+          <PrefixIcon />
+          <p>{i.details}</p>
+        </div>
+      ))
+    }
   </p>
 </div>

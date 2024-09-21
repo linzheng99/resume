@@ -6,7 +6,7 @@ import SocialLink from './ui/SocialLink.astro'
 
 <div class="flex flex-col lg:hidden ">
   <ModuleHeader title="其他链接" />
-  <ul class="flex gap-4">
+  <ul class="flex flex-col">
     {
       config.otherLinks?.map(item => (
         <li class="mb-4">

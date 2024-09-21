@@ -1,7 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components'
 import type { Project } from '../../../meta.config'
 import MatchString from './MatchString'
+import PrefixIcon from './PrefixIcon.astro'
 
 interface Props {
   data: Project[]
@@ -26,19 +26,24 @@ const matchs = [
   'Echarts',
   'vue-router',
   'Vant',
-  'Vuex'
+  'Vuex',
+  'websocket',
+  'jwt',
+  'NestJs',
+  'TypeORM',
+  'Passport',
+  'winston',
+  'migrations'
 ]
 ---
 
 <div>
-  <strong>行动</strong>
+  <strong class="text-gray-600">行动</strong>
   {
     data.map(item => (
       <p class="ml-4">
         <div class="flex">
-          <div class="mr-1 mt-1">
-            <Icon name="leaf" />
-          </div>
+          <PrefixIcon />
           <div>
             <MatchString details={item.details} matchs={matchs} />
           </div>

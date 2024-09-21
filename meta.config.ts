@@ -1,5 +1,5 @@
 export interface Project {
-  title: string
+  title?: string
   details: string
 }
 export interface Link {
@@ -12,7 +12,7 @@ interface Details {
   is?: string
   links?: Link[]
   situation: Project
-  task: Project
+  task: Project[]
   actions?: Project[]
   result?: Project
 }
@@ -98,18 +98,29 @@ const config: Config = {
             title: '背景',
             details: '随着物联网（IOT）技术的普及，联网设备和传感器产生大量数据。用户需要一个平台统一管理设备，进行实时监控、数据分析展示和异常报警通知，提升设备操作效率和数据管理能力，提供高效便捷的管理体验。'
           },
-          task: {
-            title: '任务',
-            details: '独自负责前端开发，设计和实现所有功能，确保用户界面友好和高效。与UI设计师紧密合作，确保界面视觉效果一致且吸引人。同时，我确保后台能够正确处理和存储用户的数据，并与后端团队密切合作，保证数据的准确性和系统的稳定性。'
-          },
-          actions: [
+          task: [
             {
-              title: '技术选型(PC)',
-              details: '项目使用 Vite 作为开发和生产构建的工具，核心框架为 Vue3，使用 TypeScript 进行类型安全的开发，并搭配 Naive UI 作为 UI 组件库，采用 Pinia 进行状态管理，辅助工具包括 axios、dayjs、lodash等等实用工具库，确保开发效率和代码质量。'
+              details: '独立负责前端开发，设计并实现所有功能，确保用户界面友好和高效。'
             },
             {
-              title: '开发',
-              details: '对 Naive UI 组件库进行二次封装；项目涉及到对设备的定位管理，使用高德开放平台的 地图JSAPI，对高德地图进行二次封装；减少重复开发，提升开发速度。'
+              details: '与UI设计师紧密合作，保证界面视觉效果一致且吸引人。'
+            },
+            {
+              details: '与后端团队密切配合，确保数据处理准确、系统稳定。'
+            }
+          ],
+          actions: [
+            {
+              details: '使用 Vite 和 Vue 3 进行项目开发和构建：采用 TypeScript 实现类型安全的开发，使用 Naive UI 组件库，并结合 Pinia 进行状态管理。'
+            },
+            {
+              details: '二次封装 Naive UI 组件库：根据项目需求定制和优化 Naive UI 组件，提高开发效率，减少重复代码。'
+            },
+            {
+              details: '设备定位管理：通过高德地图 JSAPI 和 WebSocket 实时管理设备定位，对其进行二次封装，简化调用和维护。'
+            },
+            {
+              details: '辅助工具的使用：引入 axios、dayjs、lodash 等工具库，提高开发效率和代码质量。'
             },
           ],
           result: {
@@ -124,18 +135,23 @@ const config: Config = {
             title: '背景',
             details: '龙舟活动已从传统节日扩展至日常运动，但安全隐患增加。为促进有序发展、提高安全性和推广龙舟文化，用户需要一个平台进行管理，利用视频监控、RFID感应和移动端定位技术，实现实时监控和精密管理。'
           },
-          task: {
-            title: '任务',
-            details: '参与业务开发将设计师提供的UI设计稿精准地实现为高质量的前端页面，确保界面美观和用户体验良好；与后端团队紧密合作，通实现前后端数据交互，确保数据的正确传递和动态渲染，使应用功能全面。'
-          },
-          actions: [
+          task: [
             {
-              title: '技术选型',
-              details: '项目使用 Vite 作为开发和生产构建的工具，核心框架为 Vue3，使用 TypeScript 进行类型安全的开发，并基于 uni-app 进行微信小程序开发。UI 组件库采用 uView Plus，状态管理使用 Pinia，使用 Unocss 进行原子化 CSS 处理，确保开发效率和代码质量。'
+              details: '负责项目中的大部分前端开发工作，从页面实现到与后端数据交互，确保项目顺利推进。'
             },
             {
-              title: '开发',
-              details: '对 uView Plus UI组件库进行二次封装，减少重复开发，提升开发速度；将功能模块化，便于独立开发和测试，提高代码的可维护性；'
+              details: '将设计稿转化为高质量页面，优化交互和布局，提升用户体验。'
+            },
+          ],
+          actions: [
+            {
+              details: '使用 Vite 和 Vue 3 开发构建，结合 TypeScript 和 uni-app 开发小程序；采用 uView Plus 组件库、Pinia 状态管理和 Unocss 原子化 CSS，提高开发效率和代码质量。'
+            },
+            {
+              details: '根据项目需求对 uView Plus 组件库进行二次封装，减少重复开发，提高开发效率。'
+            },
+            {
+              details: '将功能模块化，实现独立开发和测试，提升代码的可维护性和扩展性。'
             },
           ],
           result: {
@@ -177,15 +193,19 @@ const config: Config = {
             title: '背景',
             details: '国内外电商平台，合作对接数千家制造商，以工厂价格采购产品，轻松将产品快速上架到您的店铺。尽享批发功能、预订库存、质量检查、全球仓库履行和高效交付服务。免安装费、免月费，免最低订单量。'
           },
-          task: {
-            title: '任务',
-            details: '项目的功能迭代，BUG修复，功能优化，页面美化等'
-          },
+          task: [
+            {
+              title: '任务',
+              details: '项目的功能迭代，BUG修复，功能及页面的优化。'
+            }
+          ],
           actions: [
             {
-              title: '技术选型与开发',
-              details: '使用 React 对任务进行开发'
-            }
+              details: '使用 React 进行开发。'
+            },
+            {
+              details: '与UI设计师紧密合作，保证界面视觉效果一致且吸引人。'
+            },
           ],
           result: {
             title: '结果',
@@ -198,78 +218,57 @@ const config: Config = {
   // 个人开源项目
   projects: [
     {
-      name: '中后台管理系统',
+      name: '基于 NestJs + Vue3 的后台管理系统',
       links: [
-        // {
-        //   icon: 'link',
-        //   value: '文档链接',
-        //   url: 'https://linzheng99.github.io/tob-docs-site'
-        // },
         {
           icon: 'link',
-          value: 'web预览链接',
+          value: '预览链接',
           url: 'http://118.31.0.102:3005/'
-        },
-        {
-          icon: 'link',
-          value: 'nest仓库地址',
-          url: 'https://github.com/linzheng99/tob-nest-template'
         },
       ],
       situation: {
         title: '背景',
-        details: '希望深入了解前端项目的搭建及工程化。此项目的目的是封装和解决在日常业务项目中遇到的一些重复功能点和难点'
+        details: '基于 NestJS + TypeScript + TypeORM + Redis + MySQL + Vue 3 + Naive UI 开发了一款简单高效的前后端分离后台管理系统。'
       },
-      task: {
-        title: '任务',
-        details: '构建一个模板项目，包含前端项目的核心结构和常用功能模块，方便在未来的项目中复用和快速启动。同时，这个项目也应该能够支持现代前端开发的最佳实践和工具。'
-      },
+      task: [
+        {
+          details: '开发一个简单高效的权限管理系统。用于管理不同角色和用户的权限，提升项目的可维护性和可扩展性。'
+        },
+        {
+          details: '使用 NestJs 构建后端 API。使用 Vue 3 开发前端界面。'
+        }
+      ],
       actions: [
         {
-          title: '1',
-          details: '使用 Vite 作为开发和构建工具，优化构建速度和开发体验'
+          details: '后端开发使用 NestJs 构建，基于 TypeORM 进行数据库操作，实现用户、角色、权限、菜单多表关联的查询及分页功能。采用 JWT 和 Passport 进行用户身份认证与授权。配合 winston 实现日志记录和错误监控。通过 migrations 进行数据迁移，保障数据库结构的版本化管理。'
         },
         {
-          title: '2',
-          details: '使用了 Vue3 作为核心框架，并配合使用 vue-router 和 Pinia 进行状态管理'
+          details: '前端开发使用 Vite 作为构建工具，使用了 Vue3 作为核心框架，并配合使用 vue-router 和 Pinia 进行状态管理。封装 axios、Echarts、Naive UI 等，以提升项目功能和开发效率，集成了 ESLint 进行代码质量检查和格式化。'
         },
         {
-          title: '3',
-          details: '封装 axios、Echarts、Naive UI 等，以提升项目功能和开发效率'
-        },
-        {
-          title: '4',
-          details: '集成了 ESLint 进行代码质量检查和格式化'
-        },
-        {
-          title: '5',
-          details: '采用 VitePress 进行项目文档的开发和构建'
+          details: '采用 VitePress 进行项目文档编写。'
         }
       ],
       result: {
         title: '结果',
-        details: '创建了一个结构较清晰的前端模板项目。它提高了日常开发效率。这个模板项目为你和团队提供了一些帮助，可以在未来的项目中快速启动，并保证代码的一致性和高质量。'
+        details: '成功搭建了一个功能完善的后台管理系统，易于扩展，可根据需求快速添加新功能和模块。通过使用 NestJS 了解后端开发的核心概念与技术，包括 API 架构设计、数据库操作、用户认证和授权等。'
       }
     },
-    // {
-    //   title: '地图组件库',
-    //   details: 'XXXXXX'
-    // }
   ],
   // 技能
-  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue3/2', 'React', 'Vite', 'Webpack', 'Unocss/Tailwind Css', 'ESLint', 'Nodejs', 'Git', 'uni-app', '微信小程序', 'Vim'],
+  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue2', 'Vue3', 'React', 'Vite', 'Webpack', 'ESLint', 'NodeJs', 'Git', 'uni-app', '微信小程序', 'NestJs', 'Vim'],
   // 其他链接
   otherLinks: [
     {
       icon: 'github',
-      value: 'GitHub',
+      value: 'GitHub: https://github.com/linzheng99',
       url: 'https://github.com/linzheng99'
     },
-    // {
-    //   icon: 'person',
-    //   value: 'linzheng99.top',
-    //   url: 'https://linzheng99.top'
-    // }
+    {
+      icon: 'yuque',
+      value: '语雀: https://www.yuque.com/linzheng99',
+      url: 'https://www.yuque.com/linzheng99'
+    },
   ],
   // 教育经历
   educations: [

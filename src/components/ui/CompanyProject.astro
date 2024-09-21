@@ -3,10 +3,11 @@ import type { Link, Project } from '../../../meta.config'
 import ProjectDetails from './ProjectDetails.astro'
 import Actions from './Actions.astro'
 import SocialLink from './SocialLink.astro'
+import Tasks from './Tasks.astro'
 
 interface Details {
   situation: Project
-  task: Project
+  task: Project[]
   actions?: Project[]
   result?: Project
 }
@@ -35,7 +36,7 @@ const {
   </div>
   <div class="flex flex-col gap-1">
     <ProjectDetails data={situation} />
-    <ProjectDetails data={task} />
+    <Tasks data={task} />
     {actions?.length && <Actions data={actions} />}
     {result && <ProjectDetails data={result} />}
   </div>
