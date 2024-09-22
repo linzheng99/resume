@@ -114,13 +114,13 @@ const config: Config = {
               details: '使用 Vite 和 Vue 3 进行项目开发和构建：采用 TypeScript 实现类型安全的开发，使用 Naive UI 组件库，并结合 Pinia 进行状态管理。'
             },
             {
-              details: '二次封装 Naive UI 组件库：根据项目需求定制和优化 Naive UI 组件，提高开发效率，减少重复代码。'
+              details: '根据项目需求定制和优化 Naive UI 组件，提高开发效率，减少重复代码。'
             },
             {
-              details: '设备定位管理：通过高德地图 JSAPI 和 WebSocket 实时管理设备定位，对其进行二次封装，简化调用和维护。'
+              details: '通过高德地图 JSAPI 和 WebSocket 实时管理设备定位，对其进行二次封装，简化调用和维护。'
             },
             {
-              details: '辅助工具的使用：引入 axios、dayjs、lodash 等工具库，提高开发效率和代码质量。'
+              details: '引入 axios、dayjs、lodash 等辅助工具库，提高开发效率和代码质量。'
             },
           ],
           result: {
@@ -159,27 +159,6 @@ const config: Config = {
             details: '平台不仅提升了龙舟活动的安全性和管理水平，还推动了龙舟文化的传播和全民参与，取得了社会和文化效益的双重提升。'
           }
         },
-        // {
-        //   name: '智慧社区矫正一体化管理平台',
-        //   situation: {
-        //     title: '背景',
-        //     details: '实现龙舟档案采集、龙舟号牌赋码等能力，实现传统龙舟、健身龙舟的专项档案管理。明确一舟一长制度，动态更新信息，由各乡镇街布置到具体村居社区，通过移动端便捷应用落实在线采集或申报'
-        //   },
-        //   task: {
-        //     title: '任务',
-        //     details: '321'
-        //   },
-        //   actions: [
-        //     {
-        //       title: '任务',
-        //       details: '321'
-        //     }
-        //   ],
-        //   result: {
-        //     title: '结果',
-        //     details: '1123'
-        //   }
-        // },
       ]
     },
     {
