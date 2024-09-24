@@ -120,7 +120,7 @@ const config: Config = {
               details: '通过高德地图 JSAPI 和 WebSocket 实时管理设备定位，对其进行二次封装，简化调用和维护。'
             },
             {
-              details: '通过 Echarts 等库对设备管理的可视化大屏开发。'
+              details: '通过 Echarts 等可视化库进行设备管理的可视化大屏开发。'
             },
             {
               details: '引入 axios、dayjs、lodash 等辅助工具库，提高开发效率和代码质量。'
