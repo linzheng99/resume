@@ -117,7 +117,7 @@ const config: Config = {
               details: '根据项目需求定制和优化 Naive UI 组件，提高开发效率，减少重复代码。'
             },
             {
-              details: '通过高德地图 JSAPI 和 WebSocket 实时管理设备定位，对其进行二次封装，简化调用和维护。'
+              details: '通过 高德地图JSAPI 对实现设备定位相关功能，依赖 websocket 通信，实现定位数据同步更新。'
             },
             {
               details: '通过 Echarts 等可视化库进行设备管理的可视化大屏开发。'
@@ -136,7 +136,7 @@ const config: Config = {
           is: '( 微信小程序 )',
           situation: {
             title: '背景',
-            details: '龙舟活动已从传统节日扩展至日常运动，但安全隐患增加。为促进有序发展、提高安全性和推广龙舟文化，用户需要一个平台进行管理，利用视频监控、RFID感应和移动端定位技术，实现实时监控和精密管理。'
+            details: '推广龙舟文化，举办龙舟活动。客户需要一个平台进行管理，利用视频监控、RFID感应和移动端定位技术，实现实时监控和精密管理。'
           },
           task: [
             {
@@ -173,7 +173,7 @@ const config: Config = {
           is: '( PC )',
           situation: {
             title: '背景',
-            details: '国内外电商平台，合作对接数千家制造商，以工厂价格采购产品，轻松将产品快速上架到您的店铺。尽享批发功能、预订库存、质量检查、全球仓库履行和高效交付服务。免安装费、免月费，免最低订单量。'
+            details: '国内外电商平台，合作对接数千家制造商，以工厂价格采购产品，轻松将产品快速上架到店铺。尽享批发功能、预订库存、质量检查、全球仓库履行和高效交付服务。'
           },
           task: [
             {
@@ -222,10 +222,16 @@ const config: Config = {
       ],
       actions: [
         {
-          details: '后端开发使用 NestJs 构建，基于 TypeORM 进行数据库操作，实现用户、角色、权限、菜单多表关联的查询及分页功能。采用 JWT 和 Passport 进行用户身份认证与授权。配合 winston 实现日志记录和错误监控。通过 migrations 进行数据迁移，保障数据库结构的版本化管理。'
+          details: '使用 Vite 作为构建工具，选用 Vue 3 作为核心框架，结合 vue-router 实现路由管理。'
         },
         {
-          details: '前端开发使用 Vite 作为构建工具，使用了 Vue3 作为核心框架，并配合使用 vue-router 和 Pinia 进行状态管理。封装 axios、Echarts、Naive UI 等，以提升项目功能和开发效率，集成了 ESLint 进行代码质量检查和格式化。'
+          details: '使用 Pinia 进行状态管理。封装 axios、Echarts、Naive UI 等库，以增强项目功能。'
+        },
+        {
+          details: '集成 ESLint 进行代码质量检查和格式化，确保代码规范性。'
+        },
+        {
+          details: '后端开发使用 NestJs 构建，基于 TypeORM 进行数据库操作，实现用户、角色、权限、菜单多表关联的查询及分页功能'
         },
         {
           details: '采用 VitePress 进行项目文档编写。'
