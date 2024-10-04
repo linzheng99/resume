@@ -111,7 +111,7 @@ const config: Config = {
           ],
           actions: [
             {
-              details: '使用 Vite 和 Vue 3 进行项目开发和构建：采用 TypeScript 实现类型安全的开发，使用 Naive UI 组件库，并结合 Pinia 进行状态管理。'
+              details: '使用 Vite 和 Vue3 进行项目开发和构建：采用 TypeScript 实现类型安全的开发，使用 Naive UI 组件库，并结合 Pinia 进行状态管理。'
             },
             {
               details: '根据项目需求定制和优化 Naive UI 组件，提高开发效率，减少重复代码。'
@@ -148,7 +148,7 @@ const config: Config = {
           ],
           actions: [
             {
-              details: '使用 Vite 和 Vue 3 开发构建，结合 TypeScript 和 uni-app 开发小程序；采用 uView Plus 组件库、Pinia 状态管理和 Unocss 原子化 CSS，提高开发效率和代码质量。'
+              details: '使用 Vite 和 Vue3 开发构建，结合 TypeScript 和 uni-app 开发小程序；采用 uView Plus 组件库、Pinia 状态管理和 Unocss 原子化 CSS，提高开发效率和代码质量。'
             },
             {
               details: '根据项目需求对 uView Plus 组件库进行二次封装，减少重复开发，提高开发效率。'
@@ -210,19 +210,19 @@ const config: Config = {
       ],
       situation: {
         title: '背景',
-        details: '基于 NestJS + TypeScript + TypeORM + Redis + MySQL + Vue 3 + Naive UI 开发了一款简单高效的前后端分离后台管理系统。'
+        details: '基于 NestJS + TypeScript + TypeORM + Redis + MySQL + Vue3 + Naive UI 开发了一款简单高效的前后端分离后台管理系统。'
       },
       task: [
         {
           details: '开发一个简单高效的权限管理系统。用于管理不同角色和用户的权限，提升项目的可维护性和可扩展性。'
         },
         {
-          details: '使用 NestJs 构建后端 API。使用 Vue 3 开发前端界面。'
+          details: '使用 NestJs 构建后端 API。使用 Vue3 开发前端界面。'
         }
       ],
       actions: [
         {
-          details: '使用 Vite 作为构建工具，选用 Vue 3 作为核心框架，结合 vue-router 实现路由管理。'
+          details: '使用 Vite 作为构建工具，选用 Vue3 作为核心框架，结合 vue-router 实现路由管理。'
         },
         {
           details: '使用 Pinia 进行状态管理。封装 axios、Echarts、Naive UI 等库，以增强项目功能。'
