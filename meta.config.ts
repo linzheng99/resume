@@ -122,9 +122,9 @@ const config: Config = {
             {
               details: '通过 Echarts 等可视化库进行设备管理的可视化大屏开发。'
             },
-            {
-              details: '引入 axios、dayjs、lodash 等辅助工具库，提高开发效率和代码质量。'
-            },
+            // {
+            //   details: '引入 axios、dayjs、lodash 等辅助工具库，提高开发效率和代码质量。'
+            // },
           ],
           result: {
             title: '结果',
