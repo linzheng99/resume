@@ -18,6 +18,7 @@ interface Details {
 }
 interface Config {
   name: string
+  skillDetails: string[]
   connection: Link[]
   links?: Link[]
   introduce: string
@@ -84,7 +85,15 @@ const config: Config = {
     // }
   ],
   // 个人介绍
-  introduce: '我是个前端开发，对新技术特感兴趣，喜欢钻研新东西，提升自己的职业技能。我有良好且严格的编码习惯，确保代码的维护性和质量。注重用户体验，喜欢和团队一起合作，分享经验，解决问题。在项目里，积极完成任务，及时汇报进展。希望能为团队贡献力量，一起做出好项目。',
+  introduce: '我对新技术特感兴趣，喜欢钻研新东西，提升自己的职业技能。我有良好且严格的编码习惯，确保代码的维护性和质量。注重用户体验，喜欢和团队一起合作，共同解决问题，分享经验。项目中，积极完成任务，及时汇报进展。希望能为团队贡献力量，一起做出好项目。',
+  skillDetails: [
+    '熟练掌握 Vue3 和 React，熟悉 TypeScript，拥有丰富的实践经验。',
+    '熟悉 Webpack / Vite 等构建工具的基本配置，能够使用以上工具搭建通用的开发环境。',
+    '熟练掌握 NestJs 并使用独立开发了一个后台管理系统。', // 包括但不限于 CURD 操作、中间件配置、模块化设计等
+    '熟练掌握 NextJs 并使用独立开发了一个项目管理系统。', // 包括但不限于 CURD 操作、中间件配置、模块化设计等
+    '熟悉 Eslint 基本配置和良好且严格的编码习惯。',
+    '熟悉行业研发设计流程，具备协同开发、分支管理及项目配置的实践经验',
+  ],
   // 公司
   companies: [
     {
@@ -111,7 +120,10 @@ const config: Config = {
           ],
           actions: [
             {
-              details: '使用 Vite 和 Vue3 进行项目开发和构建：采用 TypeScript 实现类型安全的开发，使用 Element Plus 组件库，并结合 Pinia 进行状态管理。'
+              details: '使用 Vite 和 Vue3 进行项目开发和构建：采用 TypeScript 实现类型安全的开发。'
+            },
+            {
+              details: '使用 Element Plus 组件库，使用Pinia 进行状态管理。'
             },
             {
               details: '根据项目需求定制和二次封装 Element Plus 组件，提高开发效率，减少重复代码。'
@@ -148,7 +160,10 @@ const config: Config = {
           ],
           actions: [
             {
-              details: '使用 Vite 和 Vue3 开发构建，结合 TypeScript 和 uni-app 开发小程序；采用 uView Plus 组件库、Pinia 状态管理和 Unocss 原子化 CSS，提高开发效率和代码质量。'
+              details: '使用 Vite 和 Vue3 开发构建，结合 TypeScript 和 uni-app 开发小程序。'
+            },
+            {
+              details: '使用 uView Plus 组件库、Pinia 状态管理和 Unocss 原子化 CSS，提高开发效率和代码质量。'
             },
             {
               details: '根据项目需求对 uView Plus 组件库进行二次封装，减少重复开发，提高开发效率。'
@@ -200,6 +215,49 @@ const config: Config = {
   // 个人开源项目
   projects: [
     {
+      name: 'Next Track 轻量级项目管理平台',
+      links: [
+        {
+          icon: 'link',
+          value: 'Vercel 预览链接',
+          url: 'https://next-track-ashy.vercel.app/'
+        },
+      ],
+      situation: {
+        title: '背景',
+        details: '一个轻量级的项目管理平台，帮助开发者和团队更好地管理项目和任务。'
+      },
+      task: [
+        {
+          details: '构建一个现代化的项目管理平台。'
+        },
+        {
+          details: '实现核心功能: 工作区管理、项目管理、任务跟踪、团队协作、数据分析。'
+        }
+      ],
+      actions: [
+        {
+          details: '使用 NextJs + TypeScript 作为主框架。'
+        },
+        {
+          details: '选择 Hono 处理 API 路由; 使用 Appwrite 作为后端服务。'
+        },
+        {
+          details: '采用 Feature-First 方式，实现清晰的目录结构。'
+        },
+        {
+          details: '使用 Tailwind CSS 实现响应式设计，确保良好的跨设备用户体验。'
+        },
+        {
+          details: '实现实时数据分析和可视化功能，提供项目进度和效率分析'
+        }
+      ],
+      result: {
+        title: '结果',
+        details: '这个项目不仅展示了现代化前端开发的最佳实践。为团队提供了一个实用的项目管理工具。通过合理的设计，成功构建了一个既易用又功能强大的协作平台。'
+      }
+    },
+    {
       name: '基于 NestJs + Vue3 的后台管理系统',
       links: [
         {
@@ -210,28 +268,31 @@ const config: Config = {
       ],
       situation: {
         title: '背景',
-        details: '基于 NestJS + TypeScript + TypeORM + Redis + MySQL + Vue3 + Naive UI 开发了一款简单高效的前后端分离后台管理系统。'
+        details: '一个可维护性和可扩展性的前后端分离后台管理系统，服务管理不同角色和用户的权限。'
       },
       task: [
         {
-          details: '开发一个简单高效的权限管理系统。用于管理不同角色和用户的权限，提升项目的可维护性和可扩展性。'
+          details: '开发一个简单高效的权限管理系统。'
         },
         {
-          details: '使用 NestJs 构建后端 API。使用 Vue3 开发前端界面。'
-        }
+          details: '实现核心功能: 用户、角色、权限、菜单以及常用组件的封装。'
+        },
+        {
+          details: '达到以模板的形式快速开发启动项目。'
+        },
       ],
       actions: [
         {
-          details: '使用 Vite 作为构建工具，选用 Vue3 作为核心框架，结合 vue-router 实现路由管理。'
+          details: '使用 Vite 作为构建工具，选择 Vue3 作为前端框架，结合 vue-router 实现路由管理。'
         },
         {
-          details: '使用 Pinia 进行状态管理。封装 axios、Echarts、Naive UI 等库，以增强项目功能。'
+          details: '使用 Pinia 进行状态管理。封装 axios、Echarts、Naive UI 等库，扩展项目功能增加开发效率。'
         },
         {
           details: '集成 ESLint 进行代码质量检查和格式化，确保代码规范性。'
         },
         {
-          details: '后端开发使用 NestJs 构建，基于 TypeORM 进行数据库操作，实现用户、角色、权限、菜单多表关联的查询及分页功能'
+          details: '使用 NestJs 构建后端服务，基于 TypeORM 进行对 MySQL 数据库操作，'
         },
         {
           details: '采用 VitePress 进行项目文档编写。'
@@ -244,7 +305,9 @@ const config: Config = {
     },
   ],
   // 技能
-  skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue2', 'Vue3', 'React', 'Vite', 'Webpack', 'ESLint', 'NodeJs', 'Git', 'uni-app', '微信小程序', 'NestJs', 'Vim'],
+  skills: [
+    // 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vue2', 'Vue3', 'React', 'Vite', 'Webpack', 'ESLint', 'NodeJs', 'Git', 'uni-app', '微信小程序', 'NestJs', 'NextJs', 'Vim'
+  ],
   // 其他链接
   otherLinks: [
     {
@@ -252,11 +315,11 @@ const config: Config = {
       value: 'GitHub: https://github.com/linzheng99',
       url: 'https://github.com/linzheng99'
     },
-    {
-      icon: 'yuque',
-      value: '语雀: https://www.yuque.com/linzheng99',
-      url: 'https://www.yuque.com/linzheng99'
-    },
+    // {
+    //   icon: 'yuque',
+    //   value: '语雀: https://www.yuque.com/linzheng99',
+    //   url: 'https://www.yuque.com/linzheng99'
+    // },
   ],
   // 教育经历
   educations: [

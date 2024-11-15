@@ -1,0 +1,23 @@
+---
+import config from '../../meta.config'
+import { matchs } from './ui/Actions.astro'
+import MatchString from './ui/MatchString'
+import ModuleHeader from './ui/ModuleHeader.astro'
+import PrefixIcon from './ui/PrefixIcon.astro'
+---
+
+<div>
+  <ModuleHeader title="相关技能" />
+  <ul>
+    {
+      config.skillDetails.map(details => (
+        <li class="flex">
+          <PrefixIcon />
+          <div>
+            <MatchString details={details} matchs={matchs} />
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</div>

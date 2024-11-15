@@ -9,15 +9,17 @@ import OpenSource from '../components/OpenSource.astro'
 import Education from '../components/Education.astro'
 import Links from '../components/Links.astro'
 import Footer from '../components/Footer.astro'
+import SkillDetails from '../components/SkillDetails.astro'
 ---
 
 <Layout title="Welcome.">
 	<User author={config.name} links={config.links} connection={config.connection} />
 	<div class="lg:my-20 mx-6 lg:mx-8 flex flex-col overflow-x-hidden">
 		<Introduce />
+		<SkillDetails />
 		<Company />
 		{config.projects.length ? <OpenSource /> : ''}
-		<Skills />
+		{config.skills.length > 0 && <Skills />}
 		<Links />
 		<Education />
 		<Footer />
