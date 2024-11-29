@@ -18,7 +18,7 @@ function changeColor(str: string, substringsToColor: string[], color: string) {
 }
 
 export default function MatchString(props: Props) {
-  const { details, matchs, color = '#ff6500' } = props
+  const { details, matchs, color = '#000000' } = props
 
   return (
     <>
